@@ -1,0 +1,32 @@
+<div class="card border border-dark bg-dark text-white" style="width: 1100px;">
+    <div class="card-header">
+        <strong><i class="fa fa-list"></i>Itens Disponíveis</strong>
+    </div>
+    <div class="card-body table-responsive">
+        <div id="table-desktop">
+            <table class="table table-bordered table-condensed table-hover table-striped table-dark">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Categoria</th>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container>
+                        <tr *ngFor="let item of itens;">
+                            <td>{{item.nome}}</td>
+                            <td>{{item.categoria}}</td>
+                            <td>{{item.descricao}}</td>
+                            <td>{{item.valor}}</td>
+                            <td><a [routerLink]="['/carrinho']"><i class="material-icons"> add_shopping_cart</i></a></td>
+                        </tr>
+                    </ng-container>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
